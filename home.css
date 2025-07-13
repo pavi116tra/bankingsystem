@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+.top{
+    width:100%;
+    height:100%;
+    background-image: url("./bankimg.jpg");
+    background-size: 101% 100%;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+.side1{
+    width:55%;
+    height: 100%;
+    /* background-color:red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.side1-pic {
+  width: 100%;
+  height: 50%;
+  padding: 30px;
+  /* background-color: aliceblue; */
+}
+.side1-pic h1{
+  width:96%;
+  height:30%;
+  /* background-color:red; */
+  color:blue;
+  /* text-align: center; */
+  font-size: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+.side1-pic p{
+    width:80%;
+    height:25%;
+    /* background-color: aquamarine; */
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    color:white
+}
+.play-button{
+    width:40%;
+    height:20%;
+    /* background-color: chartreuse; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.reg1 a{
+    text-decoration: none;
+    color:white;
+}
+.log1 a{
+    text-decoration: none;
+    color:white;
+}
+.reg1{
+    width:30%;
+    height:60%;
+    background-color: blue;
+    color:white;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.log1{
+    width:30%;
+    height:60%;
+    background-color: blue;
+    color:white;
+    border-radius: 20px;
+     font-size: 15px;
+}
+.safety{
+  width:100%;
+  height:100%;
+  background-color: darkmagenta;
+}

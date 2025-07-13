@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+.top{
+    width:100%;
+    height:100%;
+    background-image: url("./bankimg.jpg");
+    background-size: 101% 100%;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+
+}
+.side1{
+    width:45%;
+    height: 100%;
+    /* background-color:red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.side1-pic {
+  width: 78%;
+  height: 45%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15); /* More modern soft transparent white */
+  border-radius: 20px;
+  backdrop-filter: blur(20px);           /* Stronger glass effect */
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: all 0.3s ease;
+}
+.img-h2{
+    width:96%;
+    height:38%;
+    background-color: blue;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: "poppins",sans-serif;
+    font-weight: 700;
+}
+/* .side1-pic h2{
+  width:96%;
+  height:38%;
+  background-color:rgb(155, 242, 242);
+  color:blue;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-family: "poppins",sans-serif;
+  font-weight: 700;
+} */
+.inp{
+  width:96%;
+  height:30%;
+  /* background-color: rgb(190, 138, 71); */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  flex-direction: column;
+  gap: 12px; 
+  border-top: 10px;
+}
+.inp1{
+  width:79%;
+  height:45%;
+  background-color: white;
+   border:10px;
+}
+.bn1{
+  width:96%;
+  height:20%;
+  /* background-color: aquamarine; */
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.bn-submit{
+  width:30%;
+  height:70%;
+  background-color: blue;
+    border-radius:25px;
+    color:white;
+   
+}
+.bn-submit a{
+   text-decoration: none;   
+   color:white;
+}
+.bn-back{
+  width:30%;
+  height:70%;
+  background-color: blue;
+    border-radius:25px;
+    color:white;
+   
+}
+.bn-back a{
+   text-decoration: none;   
+   color:white;
+}
