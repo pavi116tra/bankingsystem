@@ -93,3 +93,64 @@ body {
   height:100%;
   background-color: darkmagenta;
 }
+@media (max-width: 1200px)
+{
+  
+  .side1-pic h1{
+       width:102%;
+       height:20%;
+   }
+   .side1-pic p{
+    width:89%;
+    height:25%;
+    font-size:25px;
+   }
+   .play-button{
+    width:65%;
+   }
+   .reg1{
+    width:40%;
+    height:60%;
+    font-size: 20px;
+   }
+   .log1{
+    width:40%;
+    height:60%;
+    font-size: 20px;
+   }
+}
+@media (max-width:600px)
+{
+
+  .top 
+  {
+    background-size: 155% 100%;
+  }
+  .side1 {
+    width: 90%;
+  }
+  .side1-pic h1{
+    font-size: 30px;
+    width:102%;
+    height:16%;
+  }
+     .side1-pic p {
+        width: 102%;
+        height: 25%;
+        font-size: 20px;
+    }
+
+   .top {
+        background-size: 198% 100%;
+    }
+   .play-button {
+        width: 80%;
+    }
+    .reg1{
+        font-size:18px;
+    }
+    .log1{
+      font-size:18px;
+    }
+   
+}

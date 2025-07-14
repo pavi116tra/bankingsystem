@@ -133,3 +133,74 @@ body {
 .password-change:hover{
   color:blue;
 }
+@media (max-width:1200px){
+    .top{
+    background-size: 127% 100%;
+    }
+    .side1{
+      width:60%;
+    }
+    .side1-pic{
+      width:80%;
+      height:50%;
+    }
+    .side1-pic h2{
+      font-size: 40px;
+    }
+    .np1{
+      font-size: 18px;
+    }
+    
+     .np2{
+      font-size: 18px;
+    }
+     .np3{
+      font-size: 18px;
+    }
+    .bn-login{
+      font-size: 20px;
+    }
+    .p1 p{
+      font-size: 18px;
+    }
+}
+@media (max-width:600px)
+{
+    .side1 {
+        width: 100%;
+    }
+
+   .side1-pic {
+        width: 90%;
+        height: 50%;
+    }
+    .side1-pic h2 {
+        font-size: 30px;
+    }
+
+    .np1 {
+        font-size: 15px;
+    }
+     .np2 {
+        font-size: 15px;
+    }
+     .np3 {
+        font-size: 15px;
+    }
+    
+    .bn1 {
+    width: 96%;
+    height: 12%;
+    }
+    .bn-login {
+    width: 35%;
+    font-size: 17px;
+    }
+    .p1 {
+    width: 100%;
+    flex-direction: column;
+    }
+    .password-change {
+    width: 62%;
+    }
+}

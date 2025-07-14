@@ -123,3 +123,73 @@ body {
 .p1 a:hover{
   color:blue;
 }
+@media (max-width:1200px)
+{
+    .top{
+    background-size: 128% 100%;
+    }
+    .side1-pic{
+      width:93%;
+      height:50%;
+    }
+    .side1{
+      width:65%;
+
+    }
+    .side1-pic h2{
+      font-size: 37px;
+    }
+    .inp1{
+      font-size: 18px;
+    }
+     .inp2{
+      font-size: 18px;
+    }
+     .inp3{
+      font-size: 18px;
+    }
+     .inp4{
+      font-size: 18px;
+    }
+    .bn{
+       font-size: 20px;
+    }
+    .p1 p{
+      font-size: 19px;
+    }
+}
+@media (max-width:600px){
+  
+    .top{
+      background-size: 225% 100%;
+    }
+   .side1{
+      width:100%;
+    }
+   .side1-pic {
+        width: 93%;
+        height: 51%;
+    }
+
+   .side1-pic h2 {
+        font-size: 29px;
+    }
+        .inp1 {
+        font-size: 15px;
+    }
+        .inp2 {
+        font-size: 15px;
+    }
+        .inp3 {
+        font-size: 15px;
+    }
+        .inp4 {
+        font-size: 15px;
+    }
+        .bn {
+        font-size: 17px;
+    }
+        .p1 p {
+        font-size: 18px;
+    }
+}

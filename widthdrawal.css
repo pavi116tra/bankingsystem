@@ -114,3 +114,55 @@ body {
    text-decoration: none;   
    color:white;
 }
+@media (max-width:1200px)
+{
+  .side1{
+    width:66%;
+
+  }
+  .top {
+    background-size: 128% 100%;
+  }
+   .side1-pic {
+    width: 90%;
+   }
+   .inp1{
+    font-size: 20px;
+   }
+   .inp {
+    width: 100%;
+    height: 38%;
+   }
+   .bn-submit {
+     font-size: 23px;
+   }
+    .bn-back {
+     font-size: 23px;
+   }
+}
+@media (max-width:600px){
+
+   .side1 {
+        width: 100%;
+    }
+   .top {
+        background-size: 205% 100%;
+    }
+   .inp1 {
+    width: 98%;
+    font-size: 17px;
+   }
+   .img-h2{
+    width:100%;
+    font-size:15px;
+   }
+   .bn-submit {
+     width: 38%;
+        font-size: 16px;
+    }
+    .bn-back{
+       width: 38%;
+         font-size: 16px;
+    }
+ 
+}
