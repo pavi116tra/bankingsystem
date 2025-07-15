@@ -2,6 +2,7 @@ const firstname = document.querySelector(".inp1");
 const acc_num = document.querySelector(".inp2");
 const amount_inp = document.querySelector(".inp3");
 const pasword_inp = document.querySelector(".inp4");
+const email_inp = document.querySelector(".inp5");
 const submit_bn = document.querySelector(".bn");
 function passwordcheck(password){
         if(password!==password.toLowerCase() && password!==password.toUpperCase()&& password.toString().length==10)
@@ -19,6 +20,17 @@ function passwordcheck(password){
         return false;
     }
 }
+
+function emailchecker(email)
+{
+    if(email.includes("@gmail.com"))
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 submit_bn.addEventListener("click",function(e)
 {
      e.preventDefault(); 
@@ -26,23 +38,29 @@ submit_bn.addEventListener("click",function(e)
     let account_num =acc_num.value.trim();
     let amount = amount_inp.value.trim();
     let password = pasword_inp.value.trim();
-     if(name!=""&& account_num!="" && amount!="" && password!="")
+    let email = email_inp.value.trim();
+     if(name!=""&& account_num!="" && amount!="" && password!="" && email !="") 
       {
          if(account_num.toString().length==10)
          {
              if(passwordcheck(password))
               {
-                    const user={
+                   if(emailchecker(email))
+                   {
+                      
+                      if(amount>0){
+                     const user={
                                 name : name,
-                                account_num : account_num,
-                                 amount : amount,
-                               password : password
+                                account_num : account_num,   
+                                 password : password,
+                                email:email,
+                                amount : amount,
                            };
                      let user_detail = JSON.parse(localStorage.getItem("user_detail"))||[];
                       if (!Array.isArray(user_detail)) {
                                 user_detail = [];
                         }
-                    const accexists = user_detail.some(u=>u.account_num===account_num);
+                      const accexists = user_detail.some(u=>u.account_num===account_num);
                       if(accexists)
                       {
                         alert ("this acount number is already registered");
@@ -61,17 +79,26 @@ submit_bn.addEventListener("click",function(e)
                     firstname.value="";
                     acc_num.value="";
                     amount_inp.value="";
+                    email.value="";
                     pasword_inp.value="";
+                     }
+                     else{
+                      alert("Amount cannot be negative ")
+                     }
+                   }
+                  else{
+                     alert("Enter the valid email");
+                   }
               }
-              else{
-                  alert("Enter the valid Password");
+            else{
+                 alert("Enter the valid Password (mix of upper, lower, number,length 10)")
               }     
          }
         else {
                alert("Enter the valid account number");
         }
-      }
-      else{
+    }
+    else{
           alert("Please fill in all fields.");
       }
 

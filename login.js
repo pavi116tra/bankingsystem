@@ -35,6 +35,8 @@ function limiting()
              alert("Your chances are over. Please wait for 5 minutes before trying again.")
      },5000)
    
+
+
 }
  let chance=1;
 Login_button.addEventListener("click",function(e)
@@ -52,23 +54,27 @@ Login_button.addEventListener("click",function(e)
          if(loginacc_num==="" || loginemail==="" || loginpassword==="")
         {
          alert("Please fill in all fields.");
+         return;
         }
          if(loginacc_num.toString().length!=10)
         {
               alert("Enter the valid account number");
+              return;
               
         }
         
             if(!emailchecker(loginemail))
             {
                alert("Enter the valid Email")
+               return;
             }
             if(!passwordcheck(loginpassword ))
             {
                 alert("Enter the valid Password (mix of upper, lower, number,length 10)")
                 chance++;
+                return;
             }
-   const matcheruser = user_detail.find(u => u.account_num===loginacc_num && loginpassword===u.password )
+   const matcheruser = user_detail.find(u => u.account_num===loginacc_num && loginpassword===u.password && u.email===loginemail )
    
   if(matcheruser)
   {
@@ -79,6 +85,10 @@ Login_button.addEventListener("click",function(e)
                        };
                             localStorage.setItem("user_detail_login",JSON.stringify(user1));
                             alert(" Login successfull");
+                            // console.log("All Registered Users:");
+                            // user_detail_login.forEach((u, i) => {
+                            //        console.log(`User ${i + 1}:`, u);
+                            //  });
                             window.location.href="./accdetail.html"
                             acc_num1.value="";
                             email.value="";
@@ -89,17 +99,24 @@ Login_button.addEventListener("click",function(e)
     const accExists = user_detail.find(u=> u.account_num=== loginacc_num);
     if(!accExists)
     {
-        alert("Incorrect account number");
+        alert("❌ Incorrect account number");
     }
-    else
+    else if(accExists.email !== loginemail)
+    {
+        alert("❌ Email doesn't match this account");
+    }
+    else if(accExists.password !== loginpassword)
       {
-       alert("Incorrect   password");
+       alert("❌  Incorrect  password");
        chance++;
        if(chance>5)
        {
         limiting();
         return;
        }
+      }
+      else{
+        alert("❌ Something went wrong. Try again.");
       }
      }
 })

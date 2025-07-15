@@ -34,3 +34,14 @@ if (loggedUser && loggedUser.loginacc_num) {
   alert("User not logged in.");
   window.location.href = "./login.html"; // redirect to login if not logged in
 }
+
+
+// const logout_bn = document.querySelector(".Logout")
+// logout_bn.addEventListener("click",function(e)
+// {
+//   e.preventDefault();
+//   matcherUSer.name.value="NONE";
+//   matchUser.account_num.value="NONE";
+//   loggedUser.loginemail.value="NONE";
+//   matchUser.amount.value="NONE";
+// })
