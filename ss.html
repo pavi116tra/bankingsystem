@@ -1,55 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>classList Bulb Example</title>
-  <style>
-    body {
-      text-align: center;
-      margin-top: 50px;
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if
+          request.time < timestamp.date(2025, 8, 14);
     }
-
-    .bulb {
-      width: 100px;
-      height: 100px;
-      margin: 20px auto;
-      border-radius: 50%;
-      background-color: gray;
-      box-shadow: 0 0 10px #000;
-      transition: 0.3s ease;
-    }
-
-    .on {
-      background-color: yellow;
-      box-shadow: 0 0 30px yellow;
-    }
-  </style>
-</head>
-<body>
-
-  <h2>💡 Light Bulb Toggle</h2>
-  <div id="bulb" class="bulb"></div>
-  <button id="switchBtn">Turn ON/OFF</button>
-
-  <script>
-    const bulb = document.getElementById("bulb");
-    const button = document.getElementById("switchBtn");
-
-    button.addEventListener("click", () => {
-      // Toggle the 'on' class
-      bulb.classList.toggle("on");
-
-      // Check if it's on or off using contains
-      if (bulb.classList.contains("on")) {
-        button.textContent = "Turn OFF";
-      } else {
-        button.textContent = "Turn ON";
-      }
-    });
-  </script>
-
-</body>
-</html>
+  }
+}
 
 
 
